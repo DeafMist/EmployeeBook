@@ -1,6 +1,8 @@
 public class Main {
     private static Employee[] employees = new Employee[10];
 
+    private static int counter;
+
     public static void main(String[] args) {
         fillArray();
 
@@ -58,11 +60,11 @@ public class Main {
         employeesList(1);
         System.out.println();
 
-        System.out.println("------Сотруднки, зарплата которых меньше 40000------");
+        System.out.println("------Сотрудники, зарплата которых меньше 40000------");
         employeesListWithLessThanThisSalary(40000);
         System.out.println();
 
-        System.out.println("------Сотруднки, зарплата которых больше 80000------");
+        System.out.println("------Сотрудники, зарплата которых больше 80000------");
         employeesListWithSalaryGreaterOrEqualToThis(80000);
         System.out.println();
     }
@@ -78,6 +80,7 @@ public class Main {
         employees[7] = new Employee("Приветов Алексей Геннадьевич", 4, 35580);
         employees[8] = new Employee("Бургамистров Валерий Устинович", 3, 82430);
         employees[9] = new Employee("Александров Александр Юрьевич", 1, 99999);
+        counter += 10;
     }
 
     private static void employeesList() {
@@ -230,7 +233,7 @@ public class Main {
     }
 
     private static double averageSalary() {
-        return (double) salaryExpenses() / Employee.counter;
+        return (double) salaryExpenses() / counter;
     }
 
     private static double averageSalary(int department) {

@@ -1,5 +1,5 @@
 public class Employee {
-    public static int counter;
+    private static int counter;
     private int id = counter++;
     private String fio;
     private int department;
